@@ -1,0 +1,4 @@
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.style.background=window.scrollY>40?'rgba(25,25,20,.94)':'transparent';nav.style.position=window.scrollY>40?'fixed':'absolute';nav.style.backdropFilter=window.scrollY>40?'blur(14px)':'none'}, {passive:true});
+const toggle=document.querySelector('.menu-toggle'), links=document.querySelector('.desktop-nav');
+toggle?.addEventListener('click',()=>{document.body.classList.toggle('nav-open'); if(document.body.classList.contains('nav-open')){links.style.display='flex';links.style.position='absolute';links.style.top='72px';links.style.left='0';links.style.right='0';links.style.padding='25px 7vw';links.style.background='rgba(25,25,20,.98)';links.style.flexDirection='column';links.style.gap='18px'}else{links.removeAttribute('style')}});
